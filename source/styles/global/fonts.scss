@@ -3,14 +3,14 @@
   font-family: "Oswald";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/oswaldregular.woff2"),
-       url("../fonts/oswaldregular.woff");
+  src: url("../../fonts/oswaldregular.woff2") format('woff2'),
+       url("../../fonts/oswaldregular.woff") format('woff');
 }
 
 @font-face {
   font-family: "Lato";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/latoregular.woff2"),
-       url("../fonts/latoregular.woff");
+  src: url("../../fonts/latoregular.woff2") format('woff2'),
+       url("../../fonts/oswaldregular.woffd") format('woff');
 }
