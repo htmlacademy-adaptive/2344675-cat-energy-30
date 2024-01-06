@@ -1,0 +1,16 @@
+@mixin addfont($family, $src) {
+  @font-face {
+    font-family: $family;
+    src: $src;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+}
+
+@mixin common-text {
+  color: $special_dark-grey;
+  font-size: 14px;
+  line-height: 18px;
+}
+/* Используется в .programs__text, .features__item, .example__text */

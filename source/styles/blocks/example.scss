@@ -1,0 +1,14 @@
+.example {
+  background-color: #f2f2f2;
+}
+
+.example__text {
+  @include common-text;
+}
+
+.example__totals-line {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}

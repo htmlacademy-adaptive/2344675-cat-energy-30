@@ -1,0 +1,13 @@
+.hero {
+  background-color: $basic_green;
+}
+
+.hero__slogan {
+  color: #FFF;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  margin-bottom: 25px; /* "Воздух" снизу от группы элементов (здесь - "Функциональное питание..." и "Занялся...") не может быть меньше, чем расстояние между самими элементами. */
+}
+

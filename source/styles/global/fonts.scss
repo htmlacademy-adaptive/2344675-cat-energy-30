@@ -1,16 +1,4 @@
-/* здесь подключите шрифты*/
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/oswaldregular.woff2"),
-       url("../fonts/oswaldregular.woff");
-}
 
-@font-face {
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/latoregular.woff2"),
-       url("../fonts/latoregular.woff");
-}
+@include addfont("Oswald", url("../../fonts/oswaldregular.woff2") format('woff2'));
+@include addfont("Lato", url("../../fonts/latoregular.woff2") format('woff2'));
+/* Остальные свойства шрифта не передаются как параметры, а заданы жестко в миксине - т.к. они неизменны по всему дизайну. */

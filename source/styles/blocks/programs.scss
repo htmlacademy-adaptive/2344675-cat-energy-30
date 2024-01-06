@@ -1,0 +1,22 @@
+.programs__name {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+  margin-bottom: 29px;
+}
+
+.programs__card {
+  background-color: #f2f2f2;
+}
+
+.programs__text {
+  @include common-text;
+}
+
+.programs__link {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
