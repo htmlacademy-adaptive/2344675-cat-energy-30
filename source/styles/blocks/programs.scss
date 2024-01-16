@@ -8,6 +8,16 @@
 
 .programs__card {
   background-color: #f2f2f2;
+  background-repeat: no-repeat;
+  background-size: 50px; /* Для каждого изображения потребуется подгонять размер (контур кота выходит за границы фонового круга) */
+}
+
+.programs__card--slim {
+  background-image: url("../../images/icons/stack.svg#cat-slim");
+}
+
+.programs__card--pro {
+  background-image: url("../../images/icons/stack.svg#cat-pro");
 }
 
 .programs__text {

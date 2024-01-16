@@ -1,4 +1,4 @@
 
-@include addfont("Oswald", url("../../fonts/oswaldregular.woff2") format('woff2'));
-@include addfont("Lato", url("../../fonts/latoregular.woff2") format('woff2'));
+@include addfont("Oswald", url("../../fonts/oswaldregular.woff2") format("woff2"));
+@include addfont("Lato", url("../../fonts/latoregular.woff2") format("woff2"));
 /* Остальные свойства шрифта не передаются как параметры, а заданы жестко в миксине - т.к. они неизменны по всему дизайну. */
