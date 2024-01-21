@@ -15,23 +15,17 @@
 
 <body>
   <header class="header">
-    <a class="header__logo-pic" href="index.html">
-      <picture> <!-- Графическая часть логотипа -->
+    <a class="header__logo" href="index.html">
+      <picture>
         <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" type="image/svg+xml" width="202"
           height="59">
         <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" type="image/svg+xml" width="174" height="50">
-        <img class="" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип магазина Cat Energy.">
+        <img src="images/logo-mobile.svg" width="33" height="38" alt="Логотип магазина Cat Energy.">
       </picture>
-      <img class="header__logo-text" src="images/logo-text.svg" width="128" height="24" alt="Cat Energy">
-      <!-- Текстовая часть логотипа -->
-      <!-- Текстовая часть логотипа введена в разметку, т.к. по стайлгайду при наведении/клике (тапе) меняется opactity и графического логотипа, и текстового. Т.е. они должны быть доступны для изменения. Можно сделать текстовую часть логотипа в качестве фона  блока, но это выглядит излишне сложным.
-        Расположение текстовой части по центру мобильной страницы - через position: absolute.
-        В планшетной и настольной версии элемент, содержаний текстовую часть логотипа, можно скрыть (display: none). -->
     </a>
     <nav class="header-nav">
       <button class="header-nav__button-burger" type="button">
         <img src="images/header-burgermenu.svg" width="24" height="24" alt="кнопка навигации">
-        <!-- Будет заменено на CSS-графику -->
         <span class="visually-hidden">Открыть меню.</span>
       </button>
       <ul class="header-nav__list">
