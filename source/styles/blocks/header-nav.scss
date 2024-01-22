@@ -1,7 +1,18 @@
-/* .header-nav {
-} */
+.header-nav {
+  @media (min-width: $bp_tablet) {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    row-gap: 33px;
+    max-width: calc(100vw - 205px - 33px); /* Используем логотип в качестве левого padding; 33px - аналог отступа между элементами */
+  }
+}
 
 .header-nav__button-burger {
+  @media (min-width: $bp_tablet) {
+    display: none;
+  }
+
   cursor: pointer;
   width: 31px; /* 21px по макету + по 5px на область тапа */
   height: 31px; /* 21px по макету + по 5px на область тапа */
@@ -17,12 +28,30 @@
   right: 14px;
 }
 
-/* .header-nav__list{
-} */
+.header-nav__list {
+  @media (min-width: $bp_tablet) {
+    display: flex;
+    flex-direction: row;
+    gap: 33px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+}
 
 .header-nav__item {
+  @media (min-width: $bp_tablet) {
+    border: none;
+  }
   text-align: center;
   border-top: 1px solid #e6e6e6;
+
+  @media (min-width: $bp_tablet) { /* ??: не работает. Переделать: нижняя рамка не у :last-child, а у всего ul */
+    &:last-child {
+      border: none;
+    }
+  }
 
   &:last-child {
     border-bottom: 1px solid #e6e6e6;
@@ -30,6 +59,15 @@
 }
 
 .header-nav__link {
+  @media (min-width: $bp_tablet) {
+    font-size: 18px;
+    line-height: 24px;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
   display: block;
   padding-top: 22px;
   padding-bottom: 23px;
@@ -62,7 +100,7 @@
       background-color: $basic_green;
       position: absolute;
       left: 0;
-      bottom: -8px;
+      bottom: 0;
     }
   }
 }
