@@ -11,12 +11,8 @@
   border: none;
   max-width: 100%;
   padding: 10px 20px;
+  position: relative;
+  z-index: 10;
   cursor: pointer;
 }
 
-.button-primary--hero {
-  position: relative;
-  z-index: 1;
-  margin-left: 20px;
-  margin-right: 20px;
-}

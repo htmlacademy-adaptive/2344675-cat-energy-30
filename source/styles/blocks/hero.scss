@@ -1,31 +1,52 @@
 .hero {
-  background-color: $basic_green;
-
   position: relative;
+  padding: 28px 20px 20px 20px;
 
-  &::after {
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../images/index-background-mobile@2x.jpg");
+  }
+  background-image: url("../../images/index-background-mobile@1x.jpg");
+  background-position: top center;
+  background-size: auto calc(100% - 199px);
+  background-repeat: no-repeat;
+  background-color: #62a53b; /* Подобран максимально близко к фону изображения с котом. */
+
+  &::before {
     content: "";
     display: block;
     width: 100%;
-    height: 178px;
+    height: 199px;
     background-color: $basic-white;
     position: absolute;
     bottom: 0;
+    left: 0;
   }
 
-  background-image: url("../../images/index-can-mobile@1x.png");
-  background-repeat: no-repeat;
-  background-position: center calc(100% - 45px);
+  &::after {
+    /* (?) На двойной плотности работает неправильно */
+    @media (min-resolution: 2dppx) {
+      content: url("../../images/index-can-mobile@2x.png");
+    }
+    content: url("../../images/index-can-mobile@1x.png");
+    display: block;
+    position: absolute;
+    bottom: 60px;
+    left: calc(50% - (280px / 2));
+  }
 }
 
 .hero__slogan {
   color: #ffffff;
   font-family: "Oswald", sans-serif;
   font-size: 14px;
-  line-height: 14px;
+  line-height: 21px; /* В Figma 14px, но при таком значении отсутствует интерлиньяж. */
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 302px;
+  max-width: 240px; /* Заголовок более нижнего уровня (этот) обычно занимает меньше места в строке, чем более заголовок более высокого уровня. */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 299px;
+  position: relative;
+  z-index: 10;
 }
-
-

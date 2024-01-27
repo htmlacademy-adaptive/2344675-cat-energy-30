@@ -9,7 +9,8 @@
 .section-title--hero {
   color: #ffffff;
   line-height: 36px;
-  padding-top: 27px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   text-align: center;
+  position: relative;
+  z-index: 10;
 }
