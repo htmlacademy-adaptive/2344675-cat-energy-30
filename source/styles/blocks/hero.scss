@@ -24,9 +24,9 @@
 
   &::after {
     /* (?) На двойной плотности работает неправильно */
-    @media (min-resolution: 2dppx) {
+/*     @media (min-resolution: 2dppx) {
       content: url("../../images/index-can-mobile@2x.png");
-    }
+    } */
     content: url("../../images/index-can-mobile@1x.png");
     display: block;
     position: absolute;
