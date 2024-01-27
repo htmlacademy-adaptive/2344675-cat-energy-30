@@ -4,8 +4,10 @@
 @import "./global/fonts.scss";
 @import "./global/global.scss";
 
+/* COMPONENTS */
+@import "./components/button-primary.scss";
+
 /* BLOCKS */
-@import "./blocks/button-primary.scss";
 @import "./blocks/header.scss";
 @import "./blocks/header-nav.scss";
 @import "./blocks/hero.scss";
