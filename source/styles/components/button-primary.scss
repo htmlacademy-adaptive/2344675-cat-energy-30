@@ -16,3 +16,12 @@
   cursor: pointer;
 }
 
+.button-primary--hero {
+  @media (min-width: $bp_tablet) {
+    min-width: 244px;
+    width: min-content; /* Задано ограничение, т.к. в макете справа от кнопки находится визуально значимый элемент - кот на крышке банки, который к тому же является логотипом всего сайта. Перекрывать его кнопкой нельзя. */
+    padding: 14px 26px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}

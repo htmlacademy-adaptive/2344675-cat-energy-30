@@ -7,7 +7,15 @@
 }
 
 .section-title--hero {
-  color: #ffffff;
+  @media (min-width: $bp_tablet) {
+    color: $basic-black;
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+
+  color: $basic-white;
   line-height: 36px;
   margin-bottom: 20px;
   text-align: center;
