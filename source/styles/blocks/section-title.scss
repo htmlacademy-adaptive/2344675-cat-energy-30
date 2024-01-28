@@ -16,14 +16,14 @@
 
 .section-title--hero {
   @media (min-width: $bp_tablet) {
-    color: #000000;
+    color: $basic_black;
     font-size: 60px;
     line-height: 60px;
     padding-top: 65px;
     padding-bottom: 40px;
   }
 
-  color: #ffffff;
+  color: $basic_white;
   text-align: center;
   font-size: 36px;
   line-height: 36px;

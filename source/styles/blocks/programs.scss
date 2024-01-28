@@ -7,7 +7,7 @@
 }
 
 .programs__card {
-  background-color: #f2f2f2;
+  background-color: $basic_grey;
   background-repeat: no-repeat;
   background-size: 50px; /* Для каждого изображения потребуется подгонять размер (контур кота выходит за границы фонового круга) */
 }
