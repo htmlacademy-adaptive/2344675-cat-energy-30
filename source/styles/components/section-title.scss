@@ -1,0 +1,28 @@
+.section-title {
+  font-family: "Oswald", "Lato", "Arial", sans-serif; /* Lato подключен первой альтернативой для того, чтобы при отсутствии Oswald пользователь видел единый шрифт на всей странице. */
+  font-size: 36px;
+  line-height: 40px;
+  margin-top: 0; /* В каждой секции margin сверху чуть разный. Проще указывать padding-top в секциях, чем давать заголовкам уточняющие классы и настраивать в них отступ заголовка.*/
+  margin-bottom: 40px;
+}
+
+.section-title--hero {
+  @media (min-width: $bp_tablet) {
+    color: $basic-black;
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+
+  @media (min-width: $bp_tablet) {
+    max-width: 460px;
+  }
+
+  color: $basic-white;
+  line-height: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}

@@ -1,13 +1,155 @@
 .hero {
-  background-color: $basic_green;
+  position: relative;
+
+  @media (min-width: $bp_tablet) {
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-bottom: 526px;
+    background: none;
+  }
+
+  @media (min-width: $bp_desktop) {
+    width: $desktop_width;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 580px; /* Защита от недополнения. */
+
+    padding-top: 112px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 184px;
+    background: none;
+  }
+
+  padding: 28px 20px 20px 20px;
+
+  /* Фон с котом (мобильная версия) */
+  @media (max-width: 767px) and (min-resolution: 2dppx) {
+    background-image: url("../../images/index-background-mobile@2x.jpg");
+  } /* В Firefox без уточнения (max-width: 767px) продолжает отображаться фоновое изображегние. В Chrome оно перестает отображаться и без уточнения max-width. */
+  background-image: url("../../images/index-background-mobile@1x.jpg");
+  background-position: top center;
+  background-size: auto calc(100% - 199px);
+  background-repeat: no-repeat;
+  background-color: $special_hero-bg; /* Подобран максимально близко к фону изображения с котом. */
+
+  &::before { /* Белая плашка под банкой (мобильная, десктопная версия) */
+    @media (min-width: $bp_tablet) {
+      display: none; /* В планшетной и десктопной версии не нужна, весь фон блока уже белый. */
+    }
+
+    @media (min-width: $bp_desktop) { /* В десткопной версии - фоновое изображение с котом. */
+      content: "";
+      display: block;
+      background-color: $special_hero-bg;
+      position: absolute;
+      min-height: 694px;
+      width: calc(100vw / 2);
+      bottom: 0;
+      left: calc($desktop_width / 2);
+      background-size: auto 100%;
+      object-fit: cover;
+
+      background-image: url("../../images/index-background-desktop@1x.jpg"); /* Изображение отредактировано: на правую часть добавлен градиент, переходящий в фоновый цвет. Пользователь не будет видеть шов между краем изображения и фоном. Большей плавности можно добиться, если на краях сделать градиент прозрачности (формат PNG).*/
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+
+    @media (min-width: $bp_desktop) and (min-resolution: 2dppx) {
+      background-image: url("../../images/index-background-desktop@2x.jpg");
+    }
+
+    content: "";
+    display: block;
+    width: 100%;
+    height: 199px;
+    background-color: $basic-white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &::after { /* Банка в блоке Hero. */
+    content: "";
+
+    @media (min-width: $bp_tablet) {
+      background-image: url("../../images/index-can-tablet@1x.png");
+      bottom: -3px;
+      left: 30px;
+      width: 709px;
+      height: 609px;
+    }
+
+    @media (min-width: $bp_tablet) and (min-resolution: 2dppx) {
+      background-image: url("../../images/index-can-tablet@2x.png");
+      bottom: -3px;
+      left: 30px;
+      width: 709px;
+      height: 609px;
+    }
+
+    @media (min-width: $bp_desktop) {
+      background-image: url("../../images/index-can-desktop@1x.png");
+      bottom: 49px;
+      left: 447px;
+      width: 552px;
+      height: 499px;
+    }
+
+    @media (min-width: $bp_desktop) and (min-resolution: 2dppx) {
+      background-image: url("../../images/index-can-desktop@2x.png");
+      bottom: 49px;
+      left: 447px;
+      width: 552px;
+      height: 499px;
+    }
+
+    @media (max-width: 767px) and (min-resolution: 2dppx) {
+      background-image: url("../../images/index-can-mobile@2x.png");
+      width: 280px;
+      height: 270px;
+    }
+
+    background-image: url("../../images/index-can-mobile@1x.png");
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    bottom: 60px;
+    left: calc(50% - (280px / 2));
+    width: 280px;
+    height: 270px;
+    background-size: 100%;
+  }
 }
 
 .hero__slogan {
-  color: #ffffff;
+  @media (min-width: $bp_tablet) {
+    color: $basic-black;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 48px; /* 50px по Figma, 48px по PP. */
+    font-size: 20px;
+    line-height: 20px;
+    max-width: unset;
+    text-align: left;
+  }
+
+  @media (min-width: $bp_desktop) {
+    margin-bottom: 50px;
+    max-width: 460px;
+  }
+
+  color: $basic_white;
   font-family: "Oswald", sans-serif;
   font-size: 14px;
-  line-height: 14px;
+  line-height: 21px; /* В Figma 14px, но при таком значении отсутствует интерлиньяж. */
+  text-align: center;
   text-transform: uppercase;
-  margin-bottom: 25px; /* "Воздух" снизу от группы элементов (здесь - "Функциональное питание..." и "Занялся...") не может быть меньше, чем расстояние между самими элементами. */
+  max-width: 240px; /* Заголовок более нижнего уровня (этот) обычно занимает меньше места в строке, чем более заголовок более высокого уровня. */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 299px;
+  position: relative;
+  z-index: 10;
 }
-

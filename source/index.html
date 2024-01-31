@@ -15,24 +15,18 @@
 
 <body>
   <header class="header">
-    <a class="header__logo-pic" href="index.html">
-      <picture> <!-- Графическая часть логотипа -->
+    <a class="header__logo" href="index.html">
+      <picture>
         <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" type="image/svg+xml" width="202"
           height="59">
         <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" type="image/svg+xml" width="174" height="50">
-        <img class="" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип магазина Cat Energy.">
+        <img src="images/logo-mobile.svg" width="33" height="38" alt="Логотип магазина Cat Energy.">
       </picture>
-      <img class="header__logo-text" src="images/logo-text.svg" width="128" height="24" alt="Cat Energy">
-      <!-- Текстовая часть логотипа -->
-      <!-- Текстовая часть логотипа введена в разметку, т.к. по стайлгайду при наведении/клике (тапе) меняется opactity и графического логотипа, и текстового. Т.е. они должны быть доступны для изменения. Можно сделать текстовую часть логотипа в качестве фона  блока, но это выглядит излишне сложным.
-        Расположение текстовой части по центру мобильной страницы - через position: absolute.
-        В планшетной и настольной версии элемент, содержаний текстовую часть логотипа, можно скрыть (display: none). -->
     </a>
     <nav class="header-nav">
       <button class="header-nav__button-burger" type="button">
-        <img src="images/header-burgermenu.svg" width="24" height="24" alt="кнопка навигации">
-        <!-- Будет заменено на CSS-графику -->
-        <span class="visually-hidden">Открыть меню.</span>
+<!--         <img src="images/header-burgermenu.svg" width="24" height="24" alt="кнопка навигации">
+ -->        <span class="visually-hidden">Открыть меню.</span>
       </button>
       <ul class="header-nav__list">
         <li class="header-nav__item">
@@ -50,10 +44,11 @@
 
   <main>
     <section class="hero">
-      <h1 class="section-title section-title--hero">Функциональное питание для котов</h1>
+      <h1 class="section-title section-title--hero">
+        Функциональное <br>
+        питание для котов</h1>
       <p class="hero__slogan">Занялся собой? Займись котом!</p>
-      <a class="hero__button button-primary" href="form.html">Подобрать программу</a>
-      <!-- button-primary - стилизация "зеленой кнопки" по всему проекту; hero__button - конкретизация под именно эту кнопку (ширина) -->
+      <a class="button-primary button-primary--hero" href="form.html">Подобрать программу</a>
     </section>
 
     <section class="programs">
@@ -84,8 +79,6 @@
 
     <section class="features">
       <h2 class="section-title">Как это работает</h2>
-      <!-- Для заголовка секции вводится блок section-title, т.к. в следующей секции заголовок выглядит так же (переиспользование стиля).
-      Можно также применить его для первого заголовка на странице "Функциональное питание для котов" - похоже, он отступает от левой границы полосы (или центрукется) благодаря обертке. -->
       <ul class="features__list">
         <li class="features__item">Функциональное питание содержит только полезные питательные вещества.</li>
         <li class="features__item">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
