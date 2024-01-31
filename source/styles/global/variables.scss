@@ -12,7 +12,10 @@ $special_grey-2: #666666;
 $special_dark-grey: #444444;
 $special_dark-grey-2: #222222;
 $special_border: #e6e6e6; /* Рамки меню в мобильной версии. */
+$special_hero-bg: #65a83e;
 $status_error: #ff8282;
 
 $bp_tablet: 768px;
-$bp_desktop: 1440p;
+$bp_desktop: 1440px;
+$desktop_width: 1220px; /* Ширина контента (фикс) десктопной версии. */
+
